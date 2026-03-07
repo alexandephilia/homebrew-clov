@@ -17,7 +17,7 @@ class Clov < Formula
 
     on_arm do
       url "https://github.com/alexandephilia/clov-ai/releases/download/v#{version}/clov-aarch64-apple-darwin.tar.gz"
-      sha256 "2d85cb0912fdf109a37355054b6e79cb1aef2d8955dbcbf7013c96633cc8c997"
+      sha256 "9bcdbab74142b802a590156b2dc5a03cc4df2b603f869063d43337dbef1eb19c"
     end
   end
 
