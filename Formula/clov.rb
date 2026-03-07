@@ -1,21 +1,21 @@
 class Clov < Formula
   desc "Clov Token Omitter - High-performance CLI proxy to minimize LLM token consumption"
   homepage "https://github.com/alexandephilia/clov-ai"
-  version "0.29.1"
+  version "0.29.2"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.1/clov-aarch64-apple-darwin.tar.gz"
-    sha256 "499ae8271bdc6ae963b009a37841a7ee3a1c6b00bc8f9d9f1f175c1043e8755f"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.2/clov-aarch64-apple-darwin.tar.gz"
+    sha256 "e0bb3f793a027a4e6afe5a15df08f219fca53bf7f57eb8b4501327f762be4f33"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.1/clov-x86_64-apple-darwin.tar.gz"
-    sha256 "621e4d7d0f1531e4cc78cb1b3b3cc0de27c78b373debc1a48a749c14bec25453"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.2/clov-x86_64-apple-darwin.tar.gz"
+    sha256 "80311b603fe9916972d1646b912a00bea319323bf1022fa6dfe1444fb0809e3e"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.1/clov-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "bfdc84383916b464d60fa3b3cca5b6ceea0dc1421a5f9f0459983dec2240d72c"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.2/clov-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "26387b67063b03e7c8ac147d190c9fbb8abed4edb0032e98e2dd5a6559067324"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.1/clov-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "3d3695ce932e435f51a41fe413d2a9c50c988e374f19987721fddb2379da281d"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.29.2/clov-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "8626a822b51b4bad1e2b2e949600bc1ea3d2f1b8a03198da063bf6ff59f477c9"
   end
 
   def install
