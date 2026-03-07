@@ -6,30 +6,30 @@
 class Clov < Formula
   desc "High-performance CLI proxy to minimize LLM token consumption"
   homepage "https://github.com/alexandephilia/clov-ai"
-  version "0.26.1"
+  version "0.26.2"
   license "MIT"
 
   on_macos do
     on_intel do
       url "https://github.com/alexandephilia/clov-ai/releases/download/v#{version}/clov-x86_64-apple-darwin.tar.gz"
-      sha256 "df7bd483e8b21a3dda54b6fc7754dc08d001d896cd9ac9172ec380702b45d1ca"
+      sha256 "2eb5226bcef5d94621653e72e9d27a156c2605aed6fb0d8ce3ab5f7854205e58"
     end
 
     on_arm do
       url "https://github.com/alexandephilia/clov-ai/releases/download/v#{version}/clov-aarch64-apple-darwin.tar.gz"
-      sha256 "52242918a32baf2ac704071899931d633a7aa1a98f9a9fa411e868e4221dfc67"
+      sha256 "60e3927170a450255223572c227ac2753129a67a0859bd9d5969e7a6787749bf"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/alexandephilia/clov-ai/releases/download/v#{version}/clov-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "09b63f76cd733973c28cc1f21700232fdbc567e75f80fac668acef28e8edc4ab"
+      sha256 "cdc38ff3152d52f73682fc9456e21611835600288478428d8a0ea8c976f77a82"
     end
 
     on_arm do
       url "https://github.com/alexandephilia/clov-ai/releases/download/v#{version}/clov-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6cb3ebc6b2590c86cf1cca8bcde9cfcf67fb953a6728676ebc4c2c14f805284f"
+      sha256 "9ee84ec3f5e087a96379bce71d62b165a8549ee5b8a2ea0d401a6442081d23dc"
     end
   end
 
