@@ -6,16 +6,16 @@ class Clov < Formula
 
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.3/clov-aarch64-apple-darwin.tar.gz"
-    sha256 "8a1abdda3b5706afd53001ce7af0eec3a9cbec98f4fadd1079e1a58554efee45"
+    sha256 "2fc4645677e4c6690c2a8534a4de695fb1e057015ba2d9b2c8818bd24a7fe924"
   elsif OS.mac? && Hardware::CPU.intel?
     url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.3/clov-x86_64-apple-darwin.tar.gz"
-    sha256 "6f4bcf12f91ef16228228b6ae6c0275afdfadf742787f305590e6ead3ced66ce"
+    sha256 "39d174e939933f5deca5e511a7fd0a018f648de4ec77b1bed4da4d1159a5ef3d"
   elsif OS.linux? && Hardware::CPU.arm?
     url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.3/clov-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "a08b992f3773af4b27d7638a9976cdc03840f9b40dd5cd777a75baaac2355f7e"
+    sha256 "0941562e79b92c326d2675bf616e6f37b26f13f80ad009a418d772fee0b714c2"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.3/clov-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "21aecc58aded2a082dba0a5c3959b945c3c0382c5c7f9d1ddb4e5ef310878530"
+    sha256 "b7f2a232e386b903602287e739fa108c3f838bcba5727eb69de6040b37833d6c"
   end
 
   def install
