@@ -1,20 +1,21 @@
 class Clov < Formula
-  desc "High-performance CLI proxy to minimize LLM token consumption"
+  desc "Clov Token Omitter - High-performance CLI proxy to minimize LLM token consumption"
   homepage "https://github.com/alexandephilia/clov-ai"
+  version "0.34.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.33.0/clov-aarch64-apple-darwin.tar.gz"
-    sha256 "00b63fd2b622127fe5c14680a196b7e6c3ab1d03117d8ff2684791613b10c89e"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.0/clov-aarch64-apple-darwin.tar.gz"
+    sha256 "3ecf14fa869dfb8ab961e8d9b68fab8c91f79a8cb8d9499f7ca190f1968f007f"
   elsif OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.33.0/clov-x86_64-apple-darwin.tar.gz"
-    sha256 "a4e23e5dcd97a6df7d83c640721525d3ebe61fff4660f38f4d41f8a85b763727"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.0/clov-x86_64-apple-darwin.tar.gz"
+    sha256 "8c9a845a341a4951cb347c043b11c60d128649fe9fde80d825015a95df98534c"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.33.0/clov-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "d74e883e1c2a7e6a3a5f844c7d122f595c5f0cd34fb7f07b00be137d5472133a"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.0/clov-aarch64-unknown-linux-gnu.tar.gz"
+    sha256 "84387bae0f314e3f40796f7fa3acc8df92b7686d4c3274af7c7eaad60414c6a7"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.33.0/clov-x86_64-unknown-linux-musl.tar.gz"
-    sha256 "3a4693b6f0aea5c9e71e63e1d5a71819422965e5567c27887de7c7d94762590a"
+    url "https://github.com/alexandephilia/clov-ai/releases/download/v0.34.0/clov-x86_64-unknown-linux-musl.tar.gz"
+    sha256 "6823af6bb541c329b171246fd71e562c533aa7d3354e6f18b16ab93952c6cdbe"
   end
 
   def install
@@ -26,20 +27,20 @@ class Clov < Formula
       clov is installed! Get started:
 
         # Initialize for Claude Code
-        clov hook -g          # Global hook-first setup (recommended)
-        clov hook             # Add to ./CLAUDE.md (this project only)
+        clov init -g          # Global hook-first setup (recommended)
+        clov init             # Add to ./CLAUDE.md (this project only)
 
         # See all commands
         clov --help
 
         # Measure your token savings
-        clov pulse
+        clov gain
 
       Full documentation: https://github.com/alexandephilia/clov-ai
     EOS
   end
 
   test do
-    system bin/"clov", "--version"
+    system "#{bin}/clov", "--version"
   end
 end
