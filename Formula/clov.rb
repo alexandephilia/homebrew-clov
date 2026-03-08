@@ -1,7 +1,6 @@
 class Clov < Formula
-  desc "Clov Token Omitter - High-performance CLI proxy to minimize LLM token consumption"
+  desc "High-performance CLI proxy to minimize LLM token consumption"
   homepage "https://github.com/alexandephilia/clov-ai"
-  version "0.33.0"
   license "MIT"
 
   if OS.mac? && Hardware::CPU.arm?
@@ -27,20 +26,20 @@ class Clov < Formula
       clov is installed! Get started:
 
         # Initialize for Claude Code
-        clov init -g          # Global hook-first setup (recommended)
-        clov init             # Add to ./CLAUDE.md (this project only)
+        clov hook -g          # Global hook-first setup (recommended)
+        clov hook             # Add to ./CLAUDE.md (this project only)
 
         # See all commands
         clov --help
 
         # Measure your token savings
-        clov gain
+        clov pulse
 
       Full documentation: https://github.com/alexandephilia/clov-ai
     EOS
   end
 
   test do
-    system "#{bin}/clov", "--version"
+    system bin/"clov", "--version"
   end
 end
